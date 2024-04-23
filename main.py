@@ -1,9 +1,12 @@
 import requests
+import os
+from dotenv import load_dotenv, find_dotenv
 
-TOKEN = "f0374ca8d18153960b27169e34800c556983bd09"  # My token Bitly
 url = 'https://api-ssl.bitly.com/v4/shorten'  # Create a short link
 
 info_url = 'https://api-ssl.bitly.com/v4/bitlinks/{bitlink}'  # Info about the short link
+
+load_dotenv(find_dotenv())
 
 
 def is_bitlink(token, info_url, user_link):  # Info short link or not
@@ -14,8 +17,8 @@ def is_bitlink(token, info_url, user_link):  # Info short link or not
     response.raise_for_status()
     if response.status_code == 200:
         print(f"Ссылка {user_link} является битлинком.")
-    else:
-        shorten_link(TOKEN, url, user_link)
+    # else:
+        # shorten_link(TOKEN, url, user_link)
 
 
 def shorten_link(token, url, user_link):  # Create the short link
@@ -30,18 +33,9 @@ def shorten_link(token, url, user_link):  # Create the short link
     except requests.exceptions.HTTPError:
         print("Неверная ссылка")
 
-# try:
-#     link = shorten_link(TOKEN, url, user_link)
-# except requests.exceptions.HTTPError:
-#     print("Неверная ссылка")
-# else:
-#     print("Успешно!")
-
-# is_bitlink(TOKEN, info_url, user_link)
-
 
 if __name__ == "__main__":
     user_link = input("Введите ссылку ")
-    is_bitlink(TOKEN, info_url, user_link)
-    # shorten_link(TOKEN, url, user_link)
-
+    token = os.getenv('TOKEN')
+    shorten_link(token, url, user_link)
+    # is_bitlink(TOKEN, info_url, user_link)

@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881b56cb-06c8-48d7-89ea-4e1f0afb0e1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/123.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="881b56cb-06c8-48d7-89ea-4e1f0afb0e1e" name="Changes" comment="Add def is_bitlink and shorten_link" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +82,19 @@
       <option name="presentableId" value="Default" />
       <updated>1712683758141</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add def is_bitlink and shorten_link">
+      <option name="closed" value="true" />
+      <created>1713889209563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713889209563</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add def is_bitlink and shorten_link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add def is_bitlink and shorten_link" />
   </component>
 </project>

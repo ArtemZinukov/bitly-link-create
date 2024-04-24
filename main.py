@@ -16,7 +16,7 @@ def is_bitlink(token, info_url, user_link):  # Info short link or not
     response = requests.get(info_url, headers=headers)
     response.raise_for_status()
     if response.status_code == 200:
-        print(f"Ссылка {user_link} является битлинком.")
+        return f"Ссылка {user_link} является битлинком."
     # else:
         # shorten_link(TOKEN, url, user_link)
 
@@ -28,14 +28,18 @@ def shorten_link(token, url, user_link):  # Create the short link
         }
         response = requests.post(url, headers=headers, json={"long_url": user_link})
         response.raise_for_status()
-        print(f"Битлинк {response.json()["link"]}")
-        return response.json()["link"]
+        link_output = f"Битлинк {response.json()["link"]}"
+        return link_output
     except requests.exceptions.HTTPError:
-        print("Неверная ссылка")
+        return "Неверная ссылка"
+
+
+def main():
+    print(shorten_link(token, url, user_link))
 
 
 if __name__ == "__main__":
     user_link = input("Введите ссылку ")
     token = os.getenv('TOKEN')
-    shorten_link(token, url, user_link)
+    main()
     # is_bitlink(TOKEN, info_url, user_link)

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881b56cb-06c8-48d7-89ea-4e1f0afb0e1e" name="Changes" comment="Add sensitive data">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="881b56cb-06c8-48d7-89ea-4e1f0afb0e1e" name="Changes" comment="Fixed the output of information from functions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713893965226</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed the output of information from functions">
+      <option name="closed" value="true" />
+      <created>1713971582152</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713971582152</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +128,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add def is_bitlink and shorten_link" />
     <MESSAGE value="Add sensitive data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add sensitive data" />
+    <MESSAGE value="Fixed the output of information from functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the output of information from functions" />
   </component>
 </project>

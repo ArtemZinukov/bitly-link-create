@@ -35,11 +35,11 @@ def shorten_link(token, url, user_link):  # Create the short link
 
 
 def main():
-    print(shorten_link(token, url, user_link))
+    print(shorten_link(token, url, user_link))  # Вот тут хотел написать is_bitlink, а в нем else запускает shorten_link
 
 
 if __name__ == "__main__":
     user_link = input("Введите ссылку ")
     token = os.getenv('TOKEN')
     main()
-    # is_bitlink(TOKEN, info_url, user_link)
+

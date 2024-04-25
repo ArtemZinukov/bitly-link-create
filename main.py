@@ -1,32 +1,47 @@
 import requests
 import os
 from dotenv import load_dotenv, find_dotenv
-
-url = 'https://api-ssl.bitly.com/v4/shorten'  # Create a short link
-
-info_url = 'https://api-ssl.bitly.com/v4/bitlinks/{bitlink}'  # Info about the short link
-
-load_dotenv(find_dotenv())
+from urllib.parse import urlparse
 
 
-def is_bitlink(token, info_url, user_link):  # Info short link or not
+def is_bitlink(token, user_link):  # Info short link or not
+    parsed = urlparse(user_link)
+    netloc = parsed.netloc
+    path = parsed.path
+    INFO_URL = f'https://api-ssl.bitly.com/v4/bitlinks/{netloc}/{path}'
     headers = {
         "Authorization": f"Bearer {token}"
     }
-    response = requests.get(info_url, headers=headers)
+    response = requests.get(INFO_URL, headers=headers)
     response.raise_for_status()
-    if response.status_code == 200:
-        return f"Ссылка {user_link} является битлинком."
-    # else:
-        # shorten_link(TOKEN, url, user_link)
+    if response.ok:
+        count_click(token, netloc, path)
+    else:
+        shorten_link(token, user_link)
 
 
-def shorten_link(token, url, user_link):  # Create the short link
+def count_click(token, netloc, path):  # Count click for link
+    URL = f'https://api-ssl.bitly.com/v4/bitlinks/{netloc}/{path}/clicks/summary'
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+    params = {
+        "unit": "day",
+        "units": -1
+    }
+    response = requests.post(URL, headers=headers, params=params)
+    response.raise_for_status()
+    clicks_count = f"Количество кликов по ссылке: {response.json()["total_clicks"]}"
+    return clicks_count
+
+
+def shorten_link(token, user_link):  # Create the short link
     try:
+        URL = 'https://api-ssl.bitly.com/v4/shorten'
         headers = {
             "Authorization": f"Bearer {token}"
         }
-        response = requests.post(url, headers=headers, json={"long_url": user_link})
+        response = requests.post(URL, headers=headers, json={"long_url": user_link})
         response.raise_for_status()
         link_output = f"Битлинк {response.json()["link"]}"
         return link_output
@@ -35,11 +50,14 @@ def shorten_link(token, url, user_link):  # Create the short link
 
 
 def main():
-    print(shorten_link(token, url, user_link))  # Вот тут хотел написать is_bitlink, а в нем else запускает shorten_link
+    load_dotenv(find_dotenv())
+    user_link = input("Введите ссылку ")
+    token = os.environ['TOKEN_BITLY']
+    try:
+        print(is_bitlink(token, user_link))
+    except requests.exceptions.HTTPError:
+        print("Неверная ссылка")
 
 
 if __name__ == "__main__":
-    user_link = input("Введите ссылку ")
-    token = os.getenv('TOKEN')
     main()
-

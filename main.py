@@ -29,24 +29,21 @@ def count_click(token, netloc, path):  # Count click for link
         "unit": "day",
         "units": -1
     }
-    response = requests.post(URL, headers=headers, params=params)
+    response = requests.get(URL, headers=headers, params=params)
     response.raise_for_status()
     clicks_count = f"Количество кликов по ссылке: {response.json()["total_clicks"]}"
     return clicks_count
 
 
 def shorten_link(token, user_link):  # Create the short link
-    try:
-        URL = 'https://api-ssl.bitly.com/v4/shorten'
-        headers = {
-            "Authorization": f"Bearer {token}"
-        }
-        response = requests.post(URL, headers=headers, json={"long_url": user_link})
-        response.raise_for_status()
-        link_output = f"Битлинк {response.json()["link"]}"
-        return link_output
-    except requests.exceptions.HTTPError:
-        return "Неверная ссылка"
+    URL = 'https://api-ssl.bitly.com/v4/shorten'
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+    response = requests.post(URL, headers=headers, json={"long_url": user_link})
+    response.raise_for_status()
+    link_output = f"Битлинк {response.json()["link"]}"
+    return link_output
 
 
 def main():

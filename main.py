@@ -4,22 +4,6 @@ from dotenv import load_dotenv, find_dotenv
 from urllib.parse import urlparse
 
 
-def is_bitlink(token, user_link):  # Info short link or not
-    parsed = urlparse(user_link)
-    netloc = parsed.netloc
-    path = parsed.path
-    INFO_URL = f'https://api-ssl.bitly.com/v4/bitlinks/{netloc}/{path}'
-    headers = {
-        "Authorization": f"Bearer {token}"
-    }
-    response = requests.get(INFO_URL, headers=headers)
-    response.raise_for_status()
-    if response.ok:
-        count_click(token, netloc, path)
-    else:
-        shorten_link(token, user_link)
-
-
 def count_click(token, netloc, path):  # Count click for link
     URL = f'https://api-ssl.bitly.com/v4/bitlinks/{netloc}/{path}/clicks/summary'
     headers = {
@@ -31,7 +15,8 @@ def count_click(token, netloc, path):  # Count click for link
     }
     response = requests.get(URL, headers=headers, params=params)
     response.raise_for_status()
-    clicks_count = f"Количество кликов по ссылке: {response.json()["total_clicks"]}"
+    clicks_count = response.json()['total_clicks']
+    print(f"Количество кликов по ссылке: {clicks_count}")
     return clicks_count
 
 
@@ -42,8 +27,25 @@ def shorten_link(token, user_link):  # Create the short link
     }
     response = requests.post(URL, headers=headers, json={"long_url": user_link})
     response.raise_for_status()
-    link_output = f"Битлинк {response.json()["link"]}"
+    link_output = response.json()['link']
+    print(f"Битлинк {link_output}")
     return link_output
+
+
+def is_bitlink(token, user_link):  # Info short link or not
+    parsed = urlparse(user_link)
+    netloc = parsed.netloc
+    path = parsed.path
+    INFO_URL = f'https://api-ssl.bitly.com/v4/bitlinks/{netloc}/{path}'
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+    response = requests.get(INFO_URL, headers=headers)
+    response.raise_for_status()
+    if response.ok:
+        return count_click(token, netloc, path)
+    else:
+        return shorten_link(token, user_link)
 
 
 def main():

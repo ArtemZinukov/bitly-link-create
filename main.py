@@ -4,8 +4,8 @@ from dotenv import load_dotenv, find_dotenv
 from urllib.parse import urlparse
 
 
-def count_click(token, netloc, path):  # Count click for link
-    URL = f'https://api-ssl.bitly.com/v4/bitlinks/{netloc}/{path}/clicks/summary'
+def count_click(token, netloc, path):
+    url = f'https://api-ssl.bitly.com/v4/bitlinks/{netloc}/{path}/clicks/summary'
     headers = {
         "Authorization": f"Bearer {token}"
     }
@@ -13,47 +13,50 @@ def count_click(token, netloc, path):  # Count click for link
         "unit": "day",
         "units": -1
     }
-    response = requests.get(URL, headers=headers, params=params)
+    response = requests.get(url, headers=headers, params=params)
     response.raise_for_status()
     clicks_count = response.json()['total_clicks']
-    print(f"Количество кликов по ссылке: {clicks_count}")
     return clicks_count
 
 
-def shorten_link(token, user_link):  # Create the short link
-    URL = 'https://api-ssl.bitly.com/v4/shorten'
+def shorten_link(token, user_link):
+    url = 'https://api-ssl.bitly.com/v4/shorten'
     headers = {
         "Authorization": f"Bearer {token}"
     }
-    response = requests.post(URL, headers=headers, json={"long_url": user_link})
+    response = requests.post(url, headers=headers, json={"long_url": user_link})
     response.raise_for_status()
     link_output = response.json()['link']
-    print(f"Битлинк {link_output}")
     return link_output
 
 
-def is_bitlink(token, user_link):  # Info short link or not
-    parsed = urlparse(user_link)
-    netloc = parsed.netloc
-    path = parsed.path
-    INFO_URL = f'https://api-ssl.bitly.com/v4/bitlinks/{netloc}/{path}'
+def is_bitlink(token, netloc, path):
+    info_url = f'https://api-ssl.bitly.com/v4/bitlinks/{netloc}/{path}'
     headers = {
         "Authorization": f"Bearer {token}"
     }
-    response = requests.get(INFO_URL, headers=headers)
-    response.raise_for_status()
+    response = requests.get(info_url, headers=headers)
     if response.ok:
-        return count_click(token, netloc, path)
+        return True
     else:
-        return shorten_link(token, user_link)
+        return False
 
 
 def main():
     load_dotenv(find_dotenv())
     user_link = input("Введите ссылку ")
-    token = os.environ['TOKEN_BITLY']
+    token = os.environ['BITLY_TOKEN']
+    url_parsing = urlparse(user_link)
+    netloc = url_parsing.netloc
+    path = url_parsing.path
     try:
-        print(is_bitlink(token, user_link))
+        bitlink = is_bitlink(token, netloc, path)
+        if bitlink:
+            transition_count = count_click(token, netloc, path)
+            print(f"Количество переходов по ссылке: {transition_count}")
+        else:
+            shot_link = shorten_link(token, user_link)
+            print(f"Ваш битлинк: {shot_link}")
     except requests.exceptions.HTTPError:
         print("Неверная ссылка")
 

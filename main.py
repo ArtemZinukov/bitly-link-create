@@ -36,10 +36,9 @@ def is_bitlink(token, netloc, path):
         "Authorization": f"Bearer {token}"
     }
     response = requests.get(info_url, headers=headers)
-    if response.ok:
-        return True
-    else:
-        return False
+    if not response.ok:
+        return
+    return True
 
 
 def main():

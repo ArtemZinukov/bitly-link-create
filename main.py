@@ -1,5 +1,6 @@
 import requests
 import os
+import argparse
 from dotenv import load_dotenv, find_dotenv
 from urllib.parse import urlparse
 
@@ -39,9 +40,17 @@ def is_bitlink(token, netloc, path):
     return response.ok
 
 
+def createParser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('link', help='Введите ссылку')
+    return parser
+
+
 def main():
     load_dotenv(find_dotenv())
-    user_link = input("Введите ссылку ")
+    parser = createParser()
+    namespace = parser.parse_args()
+    user_link = namespace.link
     token = os.environ['BITLY_TOKEN']
     url_parsing = urlparse(user_link)
     netloc = url_parsing.netloc

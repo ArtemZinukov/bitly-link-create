@@ -40,7 +40,7 @@ def is_bitlink(token, netloc, path):
     return response.ok
 
 
-def createParser():
+def create_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('link', help='Введите ссылку')
     return parser
@@ -48,7 +48,7 @@ def createParser():
 
 def main():
     load_dotenv(find_dotenv())
-    parser = createParser()
+    parser = create_parser()
     namespace = parser.parse_args()
     user_link = namespace.link
     token = os.environ['BITLY_TOKEN']

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="881b56cb-06c8-48d7-89ea-4e1f0afb0e1e" name="Changes" comment="Дополнил gitignore">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ArtemZinukov&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ArtemZinukov/bitly-link-create.git&quot;,
+    &quot;accountId&quot;: &quot;2288cae3-ad8b-4144-9732-cb9bf169094e&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2esCAyghG0ApSENWj2Tts8KKuk2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;A:/Курс DEVMAN/Lesson 2. Bitly&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="123" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="881b56cb-06c8-48d7-89ea-4e1f0afb0e1e" name="Changes" comment="" />
+      <created>1712683758141</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712683758141</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Add def is_bitlink and shorten_link">
+      <option name="closed" value="true" />
+      <created>1713889209563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713889209563</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add sensitive data">
+      <option name="closed" value="true" />
+      <created>1713893965226</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713893965226</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed the output of information from functions">
+      <option name="closed" value="true" />
+      <created>1713971582152</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713971582152</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed the output of information from functions">
+      <option name="closed" value="true" />
+      <created>1713972493559</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713972493559</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Made the improvements suggested by the mentor">
+      <option name="closed" value="true" />
+      <created>1714072063968</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714072063968</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Made the improvements suggested by the mentor">
+      <option name="closed" value="true" />
+      <created>1714073254877</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714073254877</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Made the improvements suggested by the mentor">
+      <option name="closed" value="true" />
+      <created>1714140121419</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714140121419</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Made the improvements suggested by the mentor">
+      <option name="closed" value="true" />
+      <created>1714249717566</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714249717566</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Deleted the folder .idea from the repository">
+      <option name="closed" value="true" />
+      <created>1714249993885</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714249993885</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Made the code flatter">
+      <option name="closed" value="true" />
+      <created>1714322938082</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714322938082</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Made the code flatter">
+      <option name="closed" value="true" />
+      <created>1714498011256</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714498011256</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Зaменил input на argparse">
+      <option name="closed" value="true" />
+      <created>1715012380402</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715012380402</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Дополнил gitignore">
+      <option name="closed" value="true" />
+      <created>1715107012335</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715107012335</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add def is_bitlink and shorten_link" />
+    <MESSAGE value="Add sensitive data" />
+    <MESSAGE value="Fixed the output of information from functions" />
+    <MESSAGE value="Made the improvements suggested by the mentor" />
+    <MESSAGE value="Deleted the folder .idea from the repository" />
+    <MESSAGE value="Made the code flatter" />
+    <MESSAGE value="Зaменил input на argparse" />
+    <MESSAGE value="Дополнил gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Дополнил gitignore" />
+  </component>
+</project>

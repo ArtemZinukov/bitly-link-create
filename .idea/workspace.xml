@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881b56cb-06c8-48d7-89ea-4e1f0afb0e1e" name="Changes" comment="Дополнил gitignore">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="881b56cb-06c8-48d7-89ea-4e1f0afb0e1e" name="Changes" comment="Изменил название функции на create_parser">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +206,31 @@
       <option name="project" value="LOCAL" />
       <updated>1715107012335</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Изменил README">
+      <option name="closed" value="true" />
+      <created>1715107177379</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715107177379</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Изменил README">
+      <option name="closed" value="true" />
+      <created>1715107181161</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715107181161</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Изменил название функции на create_parser">
+      <option name="closed" value="true" />
+      <created>1715107269011</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715107269011</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +253,8 @@
     <MESSAGE value="Made the code flatter" />
     <MESSAGE value="Зaменил input на argparse" />
     <MESSAGE value="Дополнил gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Дополнил gitignore" />
+    <MESSAGE value="Изменил README" />
+    <MESSAGE value="Изменил название функции на create_parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменил название функции на create_parser" />
   </component>
 </project>

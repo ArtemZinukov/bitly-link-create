@@ -49,12 +49,12 @@ def create_parser():
 def main():
     load_dotenv(find_dotenv())
     parser = create_parser()
-    namespace = parser.parse_args()
-    user_link = namespace.link
+    parsed_args = parser.parse_args()
+    user_link = parsed_args.link
     token = os.environ['BITLY_TOKEN']
-    url_parsing = urlparse(user_link)
-    netloc = url_parsing.netloc
-    path = url_parsing.path
+    user_link_parsing = urlparse(user_link)
+    netloc = user_link_parsing.netloc
+    path = user_link_parsing.path
     try:
         bitlink = is_bitlink(token, netloc, path)
         if bitlink:

@@ -56,8 +56,7 @@ def main():
     netloc = user_link_parsing.netloc
     path = user_link_parsing.path
     try:
-        bitlink = is_bitlink(token, netloc, path)
-        if bitlink:
+        if is_bitlink(token, netloc, path):
             transition_count = count_click(token, netloc, path)
             print(f"Количество переходов по ссылке: {transition_count}")
         else:
